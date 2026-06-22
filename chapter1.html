@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 1. Copilot 개요</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="hero"><div class="wrap"><div class="kicker">Chapter 1 · 1-1</div><h1>AX와 Copilot 개요</h1><p>빈 문서 앞에서 멈추는 시간을 줄이는 도구를 넘어, 일하는 방식을 바꾸는 동료로 Copilot을 이해합니다.</p></div></header>
+  <nav class="topnav"><div class="wrap"><a href="index.html">목차</a><a href="chapter2.html">다음 장</a><a href="github-pages-guide.html">배포</a></div></nav>
+  <main class="wrap">
+    <section class="section">
+      <h2>왜 Copilot이 필요할까</h2>
+      <p>업무에는 완전히 새로운 창작보다 반복되는 정리 작업이 많습니다. 회의록을 정리하고, 긴 공지를 요약하고, 메일 초안을 쓰고, 보고서 구조를 잡는 일은 중요하지만 매번 처음부터 하기는 부담스럽습니다.</p>
+      <div class="box">잠깐만요 │ Copilot은 일을 대신 책임지는 도구가 아닙니다. 초안과 구조를 도와주지만 최종 판단은 사람이 합니다.</div>
+      <div class="diagram">
+        <svg viewBox="0 0 920 230">
+          <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#667085"/></marker></defs>
+          <path d="M180 115 H300" stroke="#667085" stroke-width="2" fill="none" marker-end="url(#arrow)"/><path d="M470 115 H590" stroke="#667085" stroke-width="2" fill="none" marker-end="url(#arrow)"/><path d="M760 115 H860" stroke="#667085" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+          <rect x="25" y="62" width="155" height="106" rx="8" fill="#eefbfc" stroke="#087f8c"/><text x="102" y="105" text-anchor="middle" font-size="18" font-weight="700" fill="#0d3e45">원자료</text><text x="102" y="132" text-anchor="middle" font-size="14" fill="#0d3e45">회의·문서·표</text>
+          <rect x="310" y="62" width="160" height="106" rx="8" fill="#eff6ff" stroke="#2563eb"/><text x="390" y="105" text-anchor="middle" font-size="18" font-weight="700" fill="#173b76">Copilot</text><text x="390" y="132" text-anchor="middle" font-size="14" fill="#173b76">요약·초안</text>
+          <rect x="600" y="62" width="160" height="106" rx="8" fill="#f0fbf6" stroke="#16845b"/><text x="680" y="105" text-anchor="middle" font-size="18" font-weight="700" fill="#174a34">사람</text><text x="680" y="132" text-anchor="middle" font-size="14" fill="#174a34">검토·판단</text>
+          <rect x="770" y="62" width="130" height="106" rx="8" fill="#fff8eb" stroke="#a35f00"/><text x="835" y="105" text-anchor="middle" font-size="18" font-weight="700" fill="#553602">업무 적용</text>
+        </svg>
+      </div>
+    </section>
+    <section class="section">
+      <h2>베이스 모델과 AI 에이전트의 차이</h2>
+      <p>수강생이 처음 헷갈리는 지점은 “Copilot이 그냥 채팅창인가요?”입니다. 강사는 여기서 너무 기술적으로 들어가기보다, 일을 맡기는 방식의 차이로 설명합니다.</p>
+      <table><tr><th>구분</th><th>쉬운 설명</th><th>수업에서 쓰는 비유</th></tr><tr><td>베이스 모델</td><td>질문을 받으면 다음 답을 만들어내는 핵심 지능</td><td>똑똑한 작문·추론 엔진</td></tr><tr><td>Copilot</td><td>업무 앱, 조직 계정, 파일, 메일 흐름 안에서 모델을 쓰게 해주는 업무형 인터페이스</td><td>회사 업무 책상 위에 앉은 AI 동료</td></tr><tr><td>에이전트</td><td>특정 목적, 지식, 절차를 정해 반복 업무를 돕는 맞춤형 Copilot</td><td>역할이 정해진 전담 조교</td></tr></table>
+      <div class="dialogue"><div class="turn student">수강생: 그럼 Copilot이 제 일을 다 해주는 건가요?</div><div class="turn teacher-turn">강사: 아닙니다. Copilot은 초안, 정리, 비교, 아이디어를 빠르게 만들어줍니다. 하지만 어떤 내용이 맞고, 어떤 표현이 조직에 적절한지 결정하는 사람은 여전히 여러분입니다.</div></div>
+    </section>
+    <section class="section">
+      <h2>첫 실습: 짧은 안내문 요약</h2>
+      <p>처음 실습은 쉬워야 합니다. 짧은 안내문 요약으로 Copilot의 기본 감각을 잡습니다.</p>
+      <div class="prompt"><pre>아래 안내문을 5줄로 요약해줘.
+직원이 해야 할 일, 일정, 확인해야 할 질문을 나눠서 정리해줘.
+
+안내문:
+다음 주 월요일 오전 10시에 전 직원 보안 교육이 있습니다.
+교육은 온라인으로 진행되며, 교육 링크는 당일 오전 9시에 메일로 발송됩니다.
+교육을 듣지 못한 직원은 금요일까지 녹화본을 시청해야 합니다.
+부서별 수강 현황은 다음 주 금요일에 취합됩니다.</pre></div>
+      <div class="box teacher">강사 멘트: 결과가 나오면 바로 복사하지 말고, 일정과 해야 할 일이 빠지지 않았는지 확인하겠습니다.</div>
+    </section>
+    <section class="section">
+      <h2>강사용 10분 오프닝 스크립트</h2>
+      <div class="prompt"><pre>여러분, 오늘 수업의 목표는 AI 전문가가 되는 것이 아닙니다.
+Copilot에게 일을 어떻게 부탁해야 내 업무 시간이 줄어드는지 익히는 것이 목표입니다.
+오늘은 세 가지를 계속 반복합니다.
+첫째, 자료를 넣기 전에 보안 판단을 합니다.
+둘째, 질문을 막연하게 하지 않고 목표와 맥락을 줍니다.
+셋째, 결과를 그대로 믿지 않고 사람이 검토합니다.
+이 세 가지만 지키면 Copilot은 신기한 장난감이 아니라 꽤 든든한 업무 동료가 됩니다.</pre></div>
+      <ul class="checklist"><li>말을 마친 뒤 “오늘 Copilot으로 줄이고 싶은 반복 업무가 무엇인가요?”라고 질문합니다.</li><li>수강생 답변을 5개만 적고, 이후 실습 예시와 연결합니다.</li><li>기술 용어 질문이 나오면 “오늘은 원리보다 업무 적용을 먼저 잡겠습니다”라고 범위를 정리합니다.</li></ul>
+    </section>
+  </main>
+</body>
+</html>

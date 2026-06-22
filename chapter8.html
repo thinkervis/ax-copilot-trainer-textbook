@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Chapter 8. MVP와 HTML 배포</title><link rel="stylesheet" href="styles.css"><script defer src="script.js"></script></head>
+<body>
+  <header class="hero"><div class="wrap"><div class="kicker">Chapter 8 · 3부</div><h1>MVP와 HTML 배포</h1><p>아이디어를 말로만 설명하지 않고, 화면으로 보여주는 업무형 프로토타입 수업입니다.</p></div></header>
+  <nav class="topnav"><div class="wrap"><a href="index.html">목차</a><a href="chapter7.html">이전 장</a><a href="chapter9.html">다음 장</a><a href="github-pages-guide.html">배포 가이드</a></div></nav>
+  <main class="wrap">
+    <section class="section">
+      <h2>MVP란 무엇인가</h2>
+      <p>MVP는 완성품이 아니라 대화를 가능하게 하는 최소 화면입니다. “이런 기능을 만들면 좋겠다”를 말로 설명하는 대신, 버튼, 표, 흐름이 보이는 화면을 만들어 서로 같은 그림을 보게 합니다.</p>
+      <div class="diagram">
+        <svg viewBox="0 0 900 250">
+          <defs><marker id="arrow8" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#667085"/></marker></defs>
+          <rect x="35" y="70" width="160" height="110" rx="8" fill="#eefbfc" stroke="#087f8c"/><text x="115" y="115" text-anchor="middle" font-size="18" font-weight="700" fill="#0d3e45">문제 정의</text><text x="115" y="142" text-anchor="middle" font-size="14" fill="#0d3e45">누가 불편한가</text>
+          <path d="M195 125 H300" stroke="#667085" stroke-width="2" marker-end="url(#arrow8)"/>
+          <rect x="310" y="70" width="160" height="110" rx="8" fill="#eff6ff" stroke="#2563eb"/><text x="390" y="115" text-anchor="middle" font-size="18" font-weight="700" fill="#173b76">화면 초안</text><text x="390" y="142" text-anchor="middle" font-size="14" fill="#173b76">Copilot 제작</text>
+          <path d="M470 125 H575" stroke="#667085" stroke-width="2" marker-end="url(#arrow8)"/>
+          <rect x="585" y="70" width="160" height="110" rx="8" fill="#f0fbf6" stroke="#16845b"/><text x="665" y="115" text-anchor="middle" font-size="18" font-weight="700" fill="#174a34">피드백</text><text x="665" y="142" text-anchor="middle" font-size="14" fill="#174a34">수정 방향 합의</text>
+        </svg>
+      </div>
+    </section>
+    <section class="section"><h2>실습: CS 현황 대시보드 만들기</h2><div class="prompt"><pre>Copilot만 사용해서 하나의 HTML 파일로 CS 현황 대시보드 MVP를 만들어줘.
+요구사항:
+- 상단에는 오늘의 CS 요약 숫자 4개 카드
+- 가운데에는 채널별 문의량 막대그래프 느낌의 영역
+- 아래에는 우선 처리 이슈 목록
+- 데이터는 더미 데이터로 넣기
+- CSS와 JavaScript를 한 파일 안에 포함
+- 발표자가 바로 설명할 수 있게 화면 문구는 한국어로 작성</pre></div><div class="box warn">빈 화면을 만들지 않습니다. 그래프 라이브러리를 못 쓰는 상황이면 CSS 막대, 표, 숫자 카드처럼 실제로 보이는 요소로 대체합니다.</div></section>
+    <section class="section"><h2>HTML 배포 3가지 선택지</h2><table><tr><th>방법</th><th>장점</th><th>주의점</th></tr><tr><td>HTML 파일 직접 전달</td><td>가장 빠름</td><td>수정본 관리가 어렵다</td></tr><tr><td>GitHub Pages</td><td>링크로 공유 가능</td><td>공개 범위와 저장소 권한 확인 필요</td></tr><tr><td>내 PC 로컬 서버</td><td>실험에 좋음</td><td>외부 공유에는 부적합</td></tr></table></section>
+  </main>
+</body>
+</html>
